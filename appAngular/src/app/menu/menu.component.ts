@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
     templateUrl: 'views/menu.component.html'
 })
 export class MenuComponent {
-    titulo_empresa: string = "Fiap";
     titulo_home: string = "Home";
-    titulo_principal: string = "Gestão de Eventos";
+    titulo_principal: string = "Gestão de Contatos";
 }

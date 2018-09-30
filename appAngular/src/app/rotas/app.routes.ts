@@ -5,7 +5,7 @@ import { NotFoundComponent } from '../erro/notFound.component';
 
 export const appRoutes: Routes = [
     { path: "", component: HomeComponent },
-    { path: "eventos", component: CadastroComponent },
+    { path: "contatos", component: CadastroComponent },
     { path: "home", component: HomeComponent },
     { path: "**", component: NotFoundComponent }
 ];

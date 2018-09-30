@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { NotFoundComponent } from './erro/notFound.component';
 
-import { EventosService } from './services/eventos.service';
+import { ContatosService } from './services/contatos.service';
 
 @NgModule({
   imports: [BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, HttpModule],
@@ -25,7 +25,7 @@ import { EventosService } from './services/eventos.service';
     CadastroComponent,
     NotFoundComponent,
     SubLista],
-  providers: [EventosService],
+  providers: [ContatosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 {
-  "name": "angular-quickstart",
+  "name": "angular_330191",
   "version": "1.0.0",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Avaliação WebModerna",
   "scripts": {
     "build": "tsc -p src/",
     "build:watch": "tsc -p src/ -w",

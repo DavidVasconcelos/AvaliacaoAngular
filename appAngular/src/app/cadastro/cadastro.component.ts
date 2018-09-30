@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IEvento } from './../interfaces/interface.evento';
-import { EventosService } from '../services/eventos.service';
+import { IContato } from './../interfaces/interface.contato';
+import { ContatosService } from '../services/contatos.service';
 
 @Component({
     moduleId: module.id,
@@ -8,37 +8,36 @@ import { EventosService } from '../services/eventos.service';
 })
 export class CadastroComponent {
 
-    private listaEventos: IEvento[];
-    private novoEvento: IEvento;
-    private eventoSelecionado: IEvento;
+    private listaContatos: IContato[];
+    private novoContato: IContato;
+    private contatoSelecionado: IContato;
 
-    constructor(private eventosService: EventosService) {
+    constructor(private contatosService: ContatosService) {
         this.listar();
     }    
 
     public listar(): void {
-        this.eventosService.getEventosWS()
-            .subscribe(res => this.listaEventos = res,
+        this.contatosService.getContatosWS()
+            .subscribe(res => this.listaContatos = res,
                 error => alert(error),
                 () => console.log('finalizado'));
     }
 
     public novo() {
-        this.novoEvento = { descricao: '', data: '', preco: 0 }
-        this.eventoSelecionado = this.novoEvento;
+        this.novoContato = { cpf: 0, nome: '', telefone: 0, email: '' }
+        this.contatoSelecionado = this.novoContato;
     }
 
-    public incluir(evento: IEvento) {
-        //this.listaEventos.push(evento);
-        this.eventosService.setEventoWS(evento)
+    public incluir(contato: IContato) {
+       this.contatosService.setContatoWS(contato)
             .subscribe(res => JSON.stringify(res),
                 error => alert(error),
                 () => this.listar());
-        alert('Evento incluído com sucesso');
+        alert('Contato incluído com sucesso');
     }
 
-    public selecionar(item: IEvento): void {
-        this.eventoSelecionado = item;
+    public selecionar(item: IContato): void {
+        this.contatoSelecionado = item;
     }
 
 }

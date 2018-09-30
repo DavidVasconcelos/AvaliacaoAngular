@@ -1,0 +1,32 @@
+{
+  "contatos": [
+    {
+      "id": "1",
+      "cpf": "09650873015",
+      "nome": "David",
+      "telefone": "11999274236",
+      "email": "david@fiap.com.br"
+    },
+    {
+      "id": "2",
+      "cpf": "48803110062",
+      "nome": "Daniel",
+      "telefone": "11993941076",
+      "email": "daniel@fiap.com.br"
+    },
+    {
+      "id": "3",
+      "cpf": "53372833082",
+      "nome": "Jean",
+      "telefone": "11994387160",
+      "email": "jean@fiap.com.br"
+    },
+    {
+      "id": "4",
+      "cpf": "26765803025",
+      "nome": "Luiz",
+      "telefone": "11994201736",
+      "email": "luiz@fiap.com.br"
+    }
+  ]
+}

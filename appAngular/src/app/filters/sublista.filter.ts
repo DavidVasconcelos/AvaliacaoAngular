@@ -1,13 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IEvento } from '../interfaces/interface.evento';
+import { IContato } from '../interfaces/interface.contato';
 
 @Pipe({
     name: 'sublista'
 })
 export class SubLista implements PipeTransform {
-    transform(eventos: IEvento[], input: string): IEvento[] {
-        return eventos.filter(
-            evento =>
-                evento.descricao.toLowerCase().includes(input.toLowerCase()));
+    transform(contatos: IContato[], input: string): IContato[] {
+        return contatos.filter(
+            contato =>
+                contato.nome.toLowerCase().includes(input.toLowerCase()));
     }
 }
